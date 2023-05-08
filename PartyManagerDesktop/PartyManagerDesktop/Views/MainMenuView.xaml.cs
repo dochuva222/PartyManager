@@ -1,6 +1,4 @@
-﻿using PartyManagerDesktop.Views;
-using PartyManagerLib.Services;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,19 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PartyManagerDesktop
+namespace PartyManagerDesktop.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для MainMenuView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainMenuView : Page
     {
-        public MainWindow()
+        public MainMenuView()
         {
             InitializeComponent();
-            MainFrame.Navigate(new LoginView());
         }
-
-
     }
 }

@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartyManagerDesktop", "PartyManagerDesktop\PartyManagerDesktop.csproj", "{23D891C7-286E-41EE-B7F3-1B85A9EBB7A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PartyManagerDesktop", "PartyManagerDesktop\PartyManagerDesktop.csproj", "{23D891C7-286E-41EE-B7F3-1B85A9EBB7A4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PartyManagerLib", "..\PartyManagerLib\PartyManagerLib\PartyManagerLib.csproj", "{21192F0D-3286-45A7-8593-6697A826B009}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartyManagerHR", "PartyManagerHR\PartyManagerHR.csproj", "{C75ABA5E-F235-462A-A7A5-9B3C4F45BC2E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{21192F0D-3286-45A7-8593-6697A826B009}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21192F0D-3286-45A7-8593-6697A826B009}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21192F0D-3286-45A7-8593-6697A826B009}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C75ABA5E-F235-462A-A7A5-9B3C4F45BC2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C75ABA5E-F235-462A-A7A5-9B3C4F45BC2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C75ABA5E-F235-462A-A7A5-9B3C4F45BC2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C75ABA5E-F235-462A-A7A5-9B3C4F45BC2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

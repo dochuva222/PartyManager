@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,5 +16,17 @@ namespace PartyManagerLib.Models
         public int RoleId { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
+        
+        [JsonIgnore]
+        public byte[] Image { get; set; }
+        
+        [JsonIgnore]
+        public string FullName
+        {
+            get
+            {
+                return $"{Surname} {Firstname} {Middlename}";
+            }
+        }
     }
 }

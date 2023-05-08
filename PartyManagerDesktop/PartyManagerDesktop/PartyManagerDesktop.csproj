@@ -11,4 +11,9 @@
     <ProjectReference Include="..\..\PartyManagerLib\PartyManagerLib\PartyManagerLib.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
 </Project>

@@ -46,13 +46,13 @@ namespace PartyManagerLib.Services
         {
             var formData = new KeyValuePair<string, string>[]
             {
-                new KeyValuePair<string, string>("Method", "GetEmployee"),
+                new KeyValuePair<string, string>("Method", "Login"),
                 new KeyValuePair<string, string>(nameof(login), login),
                 new KeyValuePair<string, string>(nameof(password), password),
-
             };
             var response = await Post(formData);
-            return JsonConvert.DeserializeObject<Employee>(await response.Content.ReadAsStringAsync());
+            var v = await response.Content.ReadAsStringAsync();
+            return JsonConvert.DeserializeObject<List<Employee>>(v).FirstOrDefault();
         }
 
         public async static Task<List<Role>> GetRoles()

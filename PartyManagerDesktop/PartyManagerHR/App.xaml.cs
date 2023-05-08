@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace PartyManagerDesktop
+namespace PartyManagerHR
 {
     /// <summary>
     /// Interaction logic for App.xaml
@@ -15,5 +15,6 @@ namespace PartyManagerDesktop
     public partial class App : Application
     {
         public static Employee LoggedEmployee;
+
     }
 }
