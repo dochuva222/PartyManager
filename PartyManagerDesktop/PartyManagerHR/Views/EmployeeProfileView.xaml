@@ -23,7 +23,8 @@
             <TextBox Text="{Binding Middlename}" />
             <Label Content="Должность" />
             <ComboBox x:Name="CBRoles"
-                      DisplayMemberPath="Name" />
+                      DisplayMemberPath="Name" 
+                      SelectedItem="{Binding Role}"/>
             <Label Content="Логин" />
             <TextBox Text="{Binding Login}" />
             <Label Content="Пароль" />

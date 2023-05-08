@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PartyManagerLib.Models
 {
-    internal class EventEmployee
+    public class EventEmployee
     {
         public int Id { get; set; }
         public int EmployeeId { get; set; }

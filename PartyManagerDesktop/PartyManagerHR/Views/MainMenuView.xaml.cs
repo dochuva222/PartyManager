@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace PartyManagerHR.Views
 {
-    /// <summary>
-    /// Логика взаимодействия для MainMenuView.xaml
-    /// </summary>
     public partial class MainMenuView : Page
     {
         public MainMenuView()

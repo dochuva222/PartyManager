@@ -11,47 +11,56 @@
       Loaded="Page_Loaded">
 
     <Grid>
-        <ListView x:Name="LVEmployees"
-                  SelectionChanged="LVEmployees_SelectionChanged"
-                  d:ItemsSource="{d:SampleData ItemCount=15}"
-                  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
-            <ListView.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <WrapPanel />
-                </ItemsPanelTemplate>
-            </ListView.ItemsPanel>
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <Border Margin="10"
-                            BorderThickness="2"
-                            BorderBrush="Black"
-                            CornerRadius="10"
-                            Padding="10"
-                            Width="120">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="auto" />
-                                <RowDefinition Height="auto" />
-                                <RowDefinition />
-                            </Grid.RowDefinitions>
-                            <Label Content="{Binding RoleId}" />
-                            <Image Width="100"
-                                   Grid.Row="1"
-                                   Source="{Binding Image, TargetNullValue={StaticResource DefaultEmployeeImage}}" />
-                            <StackPanel Grid.Row="2">
-                                <Label Content="{Binding FullName}">
-                                    <Label.Resources>
-                                        <Style TargetType="TextBlock">
-                                            <Setter Property="TextWrapping"
-                                                    Value="Wrap" />
-                                        </Style>
-                                    </Label.Resources>
-                                </Label>
-                            </StackPanel>
-                        </Grid>
-                    </Border>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+        <DockPanel>
+            <StackPanel DockPanel.Dock="Bottom">
+                <Button x:Name="BCreate"
+                        Content="Добавить запись"
+                        Click="BCreate_Click" />
+
+            </StackPanel>
+            <ListView x:Name="LVEmployees"
+                      SelectionChanged="LVEmployees_SelectionChanged"
+                      d:ItemsSource="{d:SampleData ItemCount=15}"
+                      ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel />
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Margin="10"
+                                BorderThickness="2"
+                                BorderBrush="Black"
+                                CornerRadius="10"
+                                Padding="10"
+                                Width="120">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto" />
+                                    <RowDefinition Height="auto" />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <Label Content="{Binding Role.Name}" />
+                                <Image Width="100"
+                                       Grid.Row="1"
+                                       Source="{Binding Image, TargetNullValue={StaticResource DefaultEmployeeImage}}" />
+                                <StackPanel Grid.Row="2">
+                                    <Label Content="{Binding FullName}">
+                                        <Label.Resources>
+                                            <Style TargetType="TextBlock">
+                                                <Setter Property="TextWrapping"
+                                                        Value="Wrap" />
+                                            </Style>
+                                        </Label.Resources>
+                                    </Label>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </DockPanel>
+
     </Grid>
 </Page>

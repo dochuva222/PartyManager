@@ -29,8 +29,7 @@ namespace PartyManagerHR.Views
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            var employees = await NetManager.GetEmployees();
-            LVEmployees.ItemsSource = employees;    
+            LVEmployees.ItemsSource = DBConnection.Employees;     
         }
 
         private void LVEmployees_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -42,6 +41,11 @@ namespace PartyManagerHR.Views
                 return;
             }
             NavigationService.Navigate(new EmployeeInfoView(selectedEmployee));
+        }
+
+        private void BCreate_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new EmployeeProfileView(new Employee()));
         }
     }
 }

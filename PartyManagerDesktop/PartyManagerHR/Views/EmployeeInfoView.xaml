@@ -31,7 +31,7 @@
                     <Image Source="{Binding Image, TargetNullValue={StaticResource DefaultEmployeeImage}}" />
                     <StackPanel Grid.Column="1">
                         <Label Content="{Binding FullName}" />
-                        <Label Content="{Binding RoleId}" />
+                        <Label Content="{Binding Role.Name}" />
                         <Button x:Name="BEdit"
                                 Content="Редактировать"
                                 Click="BEdit_Click" />
