@@ -1,4 +1,5 @@
 ﻿using PartyManagerHR.Views;
+using PartyManagerLib.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,7 @@ namespace PartyManagerHR
         public MainWindow()
         {
             InitializeComponent();
+            DBConnection.InitializeDBConnection().GetAwaiter().GetResult();
             MainFrame.Navigate(new LoginView());
         }
     }

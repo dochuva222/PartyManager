@@ -23,9 +23,11 @@ namespace PartyManagerLib.Services
         //}
 
         //for static data (like roles, statuses) and first get all data
-        public static async void InitializeDBConnection()
+        public static async Task  InitializeDBConnection()
         {
+
             Roles = await NetManager.GetRoles();
+
             RefreshData();
         }
 

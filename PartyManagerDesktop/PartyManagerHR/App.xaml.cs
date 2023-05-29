@@ -18,7 +18,7 @@ namespace PartyManagerHR
         public static Employee LoggedEmployee;
         public App()
         {
-            DBConnection.InitializeDBConnection();
+            DBConnection.InitializeDBConnection().GetAwaiter().GetResult();
         }
 
     }
